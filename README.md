@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Matdaan: Python Streamlit Deployment
 
-# Run and deploy your AI Studio app
+This folder contains the Python version of the Matdaan app, ready for deployment on **Streamlit Cloud**.
 
-This contains everything you need to run your app locally.
+## Files
+- `app.py`: The main application logic.
+- `requirements.txt`: Python dependencies.
+- `.env.example`: Template for environment variables.
 
-View your app in AI Studio: https://ai.studio/apps/483e1a87-89fa-4210-804d-fd16fff79781
+## Local Setup
+1. Install Python 3.9+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Create a `.env` file with your `GEMINI_API_KEY`:
+   ```env
+   GEMINI_API_KEY=your_key_here
+   ```
+4. Run the app:
+   ```bash
+   streamlit run app.py
+   ```
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deployment to Streamlit Cloud
+1. Push these files to a GitHub repository.
+2. Link the repository to [Streamlit Cloud](https://share.streamlit.io/).
+3. Add `GEMINI_API_KEY` to the **Secrets** section in the Streamlit Cloud dashboard.
